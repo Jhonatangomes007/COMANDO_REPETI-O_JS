@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE25</title>
+</head>
+<body>
+    <!--) Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci usando o loop "do-while".-->
+
+    <script>
+
+function exibirFibonacci(n) {
+  let fibonacci = [0, 1]; // Inicializa a sequência com os dois primeiros números
+  let i = 2; // Começa a partir do índice 2
+
+  do {
+	let proximo = fibonacci[i - 1] + fibonacci[i - 2]; // Calcula o próximo número
+	fibonacci.push(proximo); // Adiciona o próximo número à sequência
+	i++;
+  } while (i < n);
+
+  console.log("Os primeiros " + n + " números da sequência de Fibonacci são: " + fibonacci.join(", "));
+}
+
+// Chama a função para exibir os primeiros 20 números da sequência de Fibonacci
+exibirFibonacci(20);
+
+    </script>
+</body>
+</html>

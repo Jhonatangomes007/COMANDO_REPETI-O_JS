@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE11</title>
+</head>
+<body>
+    <!--) Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "while"-->
+     
+    <script>
+
+         // Função para ler o número inteiro do usuário
+function lerNumeroInteiro() {
+	let numero = parseInt(prompt("Digite um número inteiro: "));
+	return numero;
+}
+
+// Função para calcular a soma dos números pares entre 1 e o número lido
+function somaPares(numero) {
+	let soma = 0;
+	let i = 1;
+
+	while (i <= numero) {
+    	if (i % 2 === 0) {
+        	soma += i;
+    	}
+    	i++;
+	}
+
+	return soma;
+}
+
+// Função principal
+function main() {
+	let numero = lerNumeroInteiro();
+	let resultado = somaPares(numero);
+	console.log("A soma de todos os números pares entre 1 e " + numero + " é: " + resultado);
+}
+
+// Chama a função principal
+main();
+ 
+
+    </script>
+</body>
+</html>

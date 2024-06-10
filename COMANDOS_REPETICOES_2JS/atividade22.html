@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE22</title>
+</head>
+<body>
+    <!-- Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "do-while".-->
+
+    <script>
+
+        // Solicita ao usuário um número inteiro
+let numero;
+do {
+    numero = parseInt(prompt("Digite um número inteiro maior que 1:"));
+} while (isNaN(numero) || numero <= 1);
+
+let ehPrimo = true;
+let divisor = 2;
+
+// Verifica se o número é primo usando um loop do-while
+do {
+    if (numero % divisor === 0) {
+        ehPrimo = false;
+        break;
+    }
+    divisor++;
+} while (divisor <= Math.sqrt(numero));
+
+// Exibe o resultado
+if (ehPrimo) {
+    console.log(`${numero} é um número primo.`);
+} else {
+    console.log(`${numero} não é um número primo.`);
+}
+
+    </script>
+</body>
+</html>

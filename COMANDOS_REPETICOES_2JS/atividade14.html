@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE14</title>
+</head>
+<body>
+    <!-- Escreva um programa que calcule o fatorial de um número inteiro inserido pelo usuário usando o loop "while".-->
+
+    <script>
+
+         // Função para ler o número inteiro do usuário
+function lerNumeroInteiro() {
+	let numero = parseInt(prompt("Digite um número inteiro: "));
+	return numero;
+}
+
+// Função para calcular o fatorial de um número
+function calcularFatorial(numero) {
+	let fatorial = 1;
+	let i = numero;
+
+	while (i > 0) {
+    	fatorial *= i;
+    	i--;
+	}
+
+	return fatorial;
+}
+
+// Função principal
+function main() {
+	let numero = lerNumeroInteiro();
+	let resultado = calcularFatorial(numero);
+	console.log("O fatorial de " + numero + " é: " + resultado);
+}
+
+// Chama a função principal
+main();
+
+    </script>
+</body>
+</html>

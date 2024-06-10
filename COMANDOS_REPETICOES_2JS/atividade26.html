@@ -1,0 +1,39 @@
+<!DOCTYPE html><
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE26</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "do-while".-->
+
+    <script>
+
+function main() {
+  let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+  if (isNaN(numero) || numero <= 0) {
+	console.log("Por favor, digite um número inteiro positivo válido.");
+	return;
+  }
+
+  let soma = 0;
+  let i = 1;
+
+  do {
+	if (i % 2 === 0) {
+  	soma += i;
+	}
+	i++;
+  } while (i <= numero);
+
+  console.log("A soma de todos os números pares entre 1 e " + numero + " é: " + soma);
+}
+
+// Chama a função principal
+main();
+
+    </script>
+</body>
+</html>

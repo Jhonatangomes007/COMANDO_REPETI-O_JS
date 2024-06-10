@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE5</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a tabuada desse número até o décimo valor usando o loop "while".-->
+
+    <script>
+
+        // Solicita ao usuário um número inteiro
+const numero = parseInt(prompt("Digite um número inteiro:"));
+
+// Verifica se o número é um valor válido
+if (isNaN(numero)) {
+    console.log("Por favor, digite um número inteiro válido.");
+} else {
+    let i = 1;
+
+    // Usando um loop while para exibir a tabuada até o décimo valor
+    while (i <= 10) {
+        console.log(`${numero} x ${i} = ${numero * i}`);
+        i++;
+    }
+}
+
+    </script>
+</body>
+</html>

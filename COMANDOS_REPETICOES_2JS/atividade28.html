@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE28</title>
+</head>
+<body>
+    <!--Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente usando o loop "do-while".-->
+
+    <script>
+         function main() {
+  let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+  if (isNaN(numero)) {
+	console.log("Por favor, digite um número inteiro válido.");
+	return;
+  }
+
+  let numeroString = numero.toString();
+  let i = 0;
+
+  do {
+	console.log(numeroString[i]);
+	i++;
+  } while (i < numeroString.length);
+}
+
+// Chama a função principal
+main();
+
+    </script>
+</body>
+</html>

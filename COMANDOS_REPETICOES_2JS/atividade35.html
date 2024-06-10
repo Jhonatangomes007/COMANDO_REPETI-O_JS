@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE35</title>
+</head>
+<body>
+    <!-- Escreva um programa que leia um número inteiro e exiba a tabuada desse número até o décimo valor.-->
+
+    <script>
+
+function exibirTabuada() {
+  let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+  if (isNaN(numero)) {
+	console.log("Por favor, digite um número inteiro válido.");
+	return;
+  }
+
+  console.log("Tabuada de " + numero + ":");
+
+  for (let i = 1; i <= 10; i++) {
+	console.log(numero + " x " + i + " = " + (numero * i));
+  }
+}
+
+// Chama a função para exibir a tabuada
+exibirTabuada();
+
+    </script>
+</body>
+</html>

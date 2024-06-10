@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE38</title>
+</head>
+<body>
+    <!--) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido.-->
+     <script>
+        
+        function fibonacciAte(numero) {
+  let fib1 = 0;
+  let fib2 = 1;
+
+  console.log("Sequência de Fibonacci até " + numero + ":");
+
+  for (let i = 0; fib1 <= numero; i++) {
+	console.log(fib1);
+	let proximo = fib1 + fib2;
+	fib1 = fib2;
+	fib2 = proximo;
+  }
+}
+
+let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+if (isNaN(numero) || numero < 0) {
+  console.log("Por favor, digite um número inteiro positivo válido.");
+} else {
+  fibonacciAte(numero);
+}
+
+     </script>
+</body>
+</html>

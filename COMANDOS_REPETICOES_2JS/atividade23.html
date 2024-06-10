@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE23</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "do-while".-->
+
+    <script>
+
+        // Função para gerar a sequência de Fibonacci até um número máximo
+function gerarFibonacci(ate) {
+  let fibonacci = [0, 1]; // Inicializa a sequência com os dois primeiros números
+  let i = 2; // Começa a partir do índice 2
+
+  do {
+	let proximo = fibonacci[i - 1] + fibonacci[i - 2]; // Calcula o próximo número
+	if (proximo > ate) break; // Sai do loop se o próximo número exceder o limite
+	fibonacci.push(proximo); // Adiciona o próximo número à sequência
+	i++;
+  } while (true);
+
+  return fibonacci; // Retorna a sequência gerada
+}
+
+// Função para ler um número do usuário e exibir a sequência de Fibonacci
+function main() {
+  let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+  if (isNaN(numero) || numero < 0) {
+	console.log("Por favor, digite um número inteiro não negativo válido.");
+  } else {
+	let sequencia = gerarFibonacci(numero);
+	console.log("Sequência de Fibonacci até " + numero + ": " + sequencia.join(", "));
+  }
+}
+
+// Chama a função principal
+main();
+
+    </script>
+</body>
+</html>

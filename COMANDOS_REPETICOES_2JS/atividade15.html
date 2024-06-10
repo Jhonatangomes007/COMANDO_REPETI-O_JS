@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIADE15</title>
+</head>
+<body>
+    <!-- Crie um programa que leia o nome e a idade de várias pessoas usando o loop "while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.-->
+
+    <script>
+        
+            // Função principal
+function main() {
+	let totalIdades = 0;
+	let quantidadePessoas = 0;
+
+	while (true) {
+    	let nome = prompt("Digite o nome (ou 'fim' para encerrar): ");
+    	if (nome.toLowerCase() === "fim") {
+        	break;
+    	}
+
+    	let idade = parseInt(prompt("Digite a idade: "));
+    	totalIdades += idade;
+    	quantidadePessoas++;
+	}
+
+	if (quantidadePessoas > 0) {
+    	let mediaIdades = totalIdades / quantidadePessoas;
+    	console.log("A média das idades é: " + mediaIdades.toFixed(2));
+	} else {
+    	console.log("Nenhuma idade foi informada.");
+	}
+}
+
+// Chama a função principal
+main();
+
+    </script>
+</body>
+</html>

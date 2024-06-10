@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE43</title>
+</head>
+<body>
+    <!-- Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente.-->
+
+    <script>
+
+function exibirDigitosSeparadamente(numero) {
+  let numeroString = numero.toString();
+
+  console.log("Dígitos do número " + numero + ":");
+
+  for (let i = 0; i < numeroString.length; i++) {
+	console.log(numeroString.charAt(i));
+  }
+}
+
+let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+if (isNaN(numero)) {
+  console.log("Por favor, digite um número inteiro válido.");
+} else {
+  exibirDigitosSeparadamente(numero);
+}
+
+    </script>
+</body>
+</html>

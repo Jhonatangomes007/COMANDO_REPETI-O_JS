@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE41</title>
+</head>
+<body>
+    <!--Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido.-->
+
+    <script>
+
+function somarParesAte(numero) {
+  let soma = 0;
+
+  for (let i = 2; i <= numero; i += 2) {
+	soma += i;
+  }
+
+  console.log("A soma dos números pares até " + numero + " é: " + soma);
+}
+
+let numero = parseInt(prompt("Digite um número inteiro: "), 10);
+
+if (isNaN(numero) || numero <= 0) {
+  console.log("Por favor, digite um número inteiro positivo válido.");
+} else {
+  somarParesAte(numero);
+}
+
+    </script>
+</body>
+</html>

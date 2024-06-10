@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE13</title>
+</head>
+<body>
+    <!--Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente usando o loop "while".-->
+
+    <script>
+
+         // Função para ler o número inteiro do usuário
+function lerNumeroInteiro() {
+	let numero = parseInt(prompt("Digite um número inteiro: "));
+	return numero;
+}
+
+// Função para exibir os dígitos separadamente
+function exibirDigitosSeparados(numero) {
+	// Converte o número para string para facilitar a separação dos dígitos
+	let numeroStr = numero.toString();
+	let i = 0;
+
+	// Loop para percorrer cada dígito da string
+	while (i < numeroStr.length) {
+    	console.log(numeroStr.charAt(i));
+    	i++;
+	}
+}
+
+// Função principal
+function main() {
+	let numero = lerNumeroInteiro();
+	exibirDigitosSeparados(numero);
+}
+
+// Chama a função principal
+main();
+
+
+    </script>
+</body>
+</html>

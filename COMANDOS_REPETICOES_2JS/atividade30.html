@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIADE30</title>
+</head>
+<body>
+    <!-- Crie um programa que leia o nome e a idade de várias pessoas usando o loop "do-while" até que o nome "fim" seja informado. Ao final, exiba a média das idades.-->
+
+    <script>
+
+let somaIdades = 0;
+let contador = 0;
+
+do {
+    // Solicita ao usuário o nome da pessoa
+    const nome = prompt(`Digite o nome da ${contador + 1}ª pessoa (ou 'fim' para encerrar):`);
+
+    // Verifica se o nome é "fim" para encerrar o loop
+    if (nome.toLowerCase() === 'fim') {
+        break;
+    }
+
+    // Solicita ao usuário a idade da pessoa
+    let idade;
+    do {
+        idade = parseInt(prompt(`Digite a idade de ${nome}:`));
+    } while (isNaN(idade) || idade <= 0);
+
+    // Adiciona a idade à soma das idades
+    somaIdades += idade;
+    contador++;
+} while (true);
+
+// Verifica se foram inseridos dados para calcular a média
+if (contador > 0) {
+    // Calcula a média das idades
+    const mediaIdades = somaIdades / contador;
+
+    // Exibe a média das idades
+    console.log(`A média das idades das pessoas é: ${mediaIdades}`);
+} else {
+    console.log("Nenhuma idade foi inserida.");
+}
+
+    </script>
+</body>
+</html>

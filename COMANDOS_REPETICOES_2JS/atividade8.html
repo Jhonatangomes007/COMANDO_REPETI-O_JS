@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATIVIDADE8</title>
+</head>
+<body>
+    <!-- Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while".-->
+
+    <script>
+
+        // Solicita ao usuário um número inteiro
+const numero = parseInt(prompt("Digite um número inteiro:"));
+
+// Verifica se o número é um valor válido
+if (isNaN(numero) || numero < 0) {
+    console.log("Por favor, digite um número inteiro válido.");
+} else {
+    let primeiro = 0;
+    let segundo = 1;
+    let proximo;
+
+    // Exibe a sequência de Fibonacci até o número lido
+    console.log("Sequência de Fibonacci:");
+    console.log(primeiro);
+    while (segundo <= numero) {
+        console.log(segundo);
+        proximo = primeiro + segundo;
+        primeiro = segundo;
+        segundo = proximo;
+    }
+}
+
+    </script>
+</body>
+</html>
